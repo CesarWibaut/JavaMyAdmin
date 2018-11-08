@@ -56,6 +56,7 @@ public class ConnectionLoader implements ServletContextListener {
 		try {
 			con = DriverManager.getConnection(url, id, pwd);
 			sce.getServletContext().setAttribute("con", con);
+			System.err.println("Context loaded on path : " + sce.getServletContext().getContextPath());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

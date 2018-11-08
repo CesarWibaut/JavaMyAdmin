@@ -44,6 +44,7 @@ public class Delete extends HttpServlet {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			resp.sendRedirect("error.html");
 		}
 		
 	}

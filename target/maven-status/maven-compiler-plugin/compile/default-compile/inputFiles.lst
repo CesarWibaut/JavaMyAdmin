@@ -1,5 +1,7 @@
-/home/infoetu/wibautc/Documents/BDD/projet07/src/main/java/servlet/Insert.java
-/home/infoetu/wibautc/Documents/BDD/projet07/src/main/java/listener/ConnectionLoader.java
-/home/infoetu/wibautc/Documents/BDD/projet07/src/main/java/filter/AddBootstrap.java
-/home/infoetu/wibautc/Documents/BDD/projet07/src/main/java/servlet/Select.java
-/home/infoetu/wibautc/Documents/BDD/projet07/src/main/java/servlet/Delete.java
+/Users/wibautc/Documents/DA2I/BDD/JDBC/projet07/src/main/java/servlet/Select.java
+/Users/wibautc/Documents/DA2I/BDD/JDBC/projet07/src/main/java/filter/AddBootstrap.java
+/Users/wibautc/Documents/DA2I/BDD/JDBC/projet07/src/main/java/servlet/Insert.java
+/Users/wibautc/Documents/DA2I/BDD/JDBC/projet07/src/main/java/servlet/Update.java
+/Users/wibautc/Documents/DA2I/BDD/JDBC/projet07/src/main/java/servlet/Delete.java
+/Users/wibautc/Documents/DA2I/BDD/JDBC/projet07/src/main/java/listener/ConnectionLoader.java
+/Users/wibautc/Documents/DA2I/BDD/JDBC/projet07/src/main/java/servlet/UpdateDB.java

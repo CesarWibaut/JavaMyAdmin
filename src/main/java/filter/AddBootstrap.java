@@ -39,5 +39,11 @@ public class AddBootstrap implements Filter {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void destroy() {
+		
+	}
+	
+	
 
 }

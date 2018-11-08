@@ -35,6 +35,18 @@
   	<description></description>
   	<servlet-class>servlet.Delete</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Update</servlet-name>
+  	<display-name>Update</display-name>
+  	<description></description>
+  	<servlet-class>servlet.Update</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateDB</servlet-name>
+  	<display-name>UpdateDB</display-name>
+  	<description></description>
+  	<servlet-class>servlet.UpdateDB</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Select</servlet-name>
   	<url-pattern>/servlet-Select</url-pattern>
@@ -46,5 +58,13 @@
   <servlet-mapping>
   	<servlet-name>Delete</servlet-name>
   	<url-pattern>/servlet-Delete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Update</servlet-name>
+  	<url-pattern>/servlet-Update</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateDB</servlet-name>
+  	<url-pattern>/updateData</url-pattern>
   </servlet-mapping>
 </web-app>

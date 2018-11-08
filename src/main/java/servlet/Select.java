@@ -24,9 +24,9 @@ public class Select extends HttpServlet {
 
 		Connection con = (Connection) getServletContext().getAttribute("con");
 		PrintWriter out = response.getWriter();
-
-		out.println("<table border=1>");
-		String table = request.getParameter("table") == null ? "fournisseurs" : request.getParameter("table");
+		out.println("<div>");
+		out.println("<table class=\"table text-center\">");
+		String table = request.getParameter("table");
 		String query = "Select * from " + table;
 
 		PreparedStatement ps;
@@ -40,10 +40,11 @@ public class Select extends HttpServlet {
 			out.println("<tr>");
 			for (int i = 1; i <= rsmd.getColumnCount(); i++) {
 				out.println("<th>" + rsmd.getColumnLabel(i) + "</th>");
-			}out.println("<th>DEL</th>");
+			}
+			out.println("<th>DEL</th>");
+			out.println("<th>MOD</th>");
 			out.println("</tr>");
-			String cle = "", value="";
-			String url="servlet-Delete?table="+table;
+			String url="";
 			while (rs.next()) {
 				out.println("<tr>");
 				for (int i = 1; i <= rsmd.getColumnCount(); i++) {
@@ -51,13 +52,16 @@ public class Select extends HttpServlet {
 					url+="&"+rsmd.getColumnLabel(i)+"="+rs.getString(i);
 				}
 
-				out.println("<td><a href=\"" + url + "\">DEL</a></td>");
-				url = "servlet-Delete?table="+table;
+				out.println("<td><a href=\"servlet-Delete?table="+table + url + "\">DEL</a></td>");
+				out.println("<td><a href=\"servlet-Update?table="+table + url + "\">MOD</a></td>");
+				url = "";
 				out.println("</tr>");
 			}
 			out.println("</table>");
-
-
+			out.println("</div>");
+			out.println("<div class=\"text-center\">");
+			rs = ps.executeQuery();
+			rsmd = rs.getMetaData();
 			try {
 				out.println("<h2> Insert dans la table : " + table + "</h2>");
 				out.println("<form method=POST action=servlet-Insert>");
@@ -67,15 +71,17 @@ public class Select extends HttpServlet {
 							rsmd.getColumnLabel(i) + " : " + "<input type=text name=" + rsmd.getColumnLabel(i) + ">");
 				}
 				out.println("<input type=Submit value=Submit>");
+				out.println("<div>");
 				out.println("</form></body></html>");
 
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			response.sendRedirect("error.html");
 		}
 
 	}
