@@ -16,10 +16,6 @@ import javax.servlet.ServletResponse;
 public class AddBootstrap implements Filter {
 
     
-
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		PrintWriter out = response.getWriter();
 		
