@@ -47,13 +47,14 @@ public class Select extends HttpServlet {
 			String url="";
 			while (rs.next()) {
 				out.println("<tr>");
+				url += "<input type=hidden name=\"table\" value=\"" + table + "\">";
 				for (int i = 1; i <= rsmd.getColumnCount(); i++) {
 					out.println("<td>" + rs.getString(i) + "</td> ");
-					url+="&"+rsmd.getColumnLabel(i)+"="+rs.getString(i);
+					url += "<input type=hidden name=\"" + rsmd.getColumnLabel(i) + "\" value=\"" + rs.getString(i) + "\">";
 				}
-
-				out.println("<td><a href=\"servlet-Delete?table="+table + url + "\">DEL</a></td>");
-				out.println("<td><a href=\"servlet-Update?table="+table + url + "\">MOD</a></td>");
+				
+				out.println("<td><form action=\"servlet-Delete\">" + url + "<input type=submit value=Delete></form></td>");
+				out.println("<td><form action=\"servlet-Update\">" + url + "<input type=submit value=Update></form></td>");
 				url = "";
 				out.println("</tr>");
 			}
