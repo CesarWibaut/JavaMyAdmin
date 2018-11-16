@@ -1,5 +1,7 @@
 ** Projet 07 BDD
 
+Sort of PHPMyAdmin in Java using servlets, maven and tocat server
+
 Par César Wibaut
 
 
@@ -14,3 +16,9 @@ $ mvn package
 
 $ mvn tomcat7:run
 ```
+
+API
+
+``` /projet07/servlet-Select?table=table ```  : List a database and allow you to insert data
+
+
