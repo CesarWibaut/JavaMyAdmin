@@ -11,11 +11,9 @@ Les paramètres de connexion se trouvent dans /src/main/resources/data.propertie
 
 ## Pour lancer le serveur
 
-`
-$ mvn package
+`$ mvn package `
 
-$ mvn tomcat7:run
-`
+`$ mvn tomcat7:run`
 
 ## API
 
