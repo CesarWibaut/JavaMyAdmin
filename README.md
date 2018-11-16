@@ -1,8 +1,8 @@
 # Projet 07 BDD
 
-Sort of PHPMyAdmin in Java using servlets, maven and tocat server
+Sort of PHPMyAdmin in Java using servlets, maven and tomcat server
 
-Par César Wibaut
+By César Wibaut
 
 
 Pour se connecter sur la base de données, il suffit d'ajouter le driver JDBC adapté au pom.xml, et modifier les données de connexion.
