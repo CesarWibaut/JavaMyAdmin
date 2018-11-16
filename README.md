@@ -1,4 +1,4 @@
-** Projet 07 BDD
+# Projet 07 BDD
 
 Sort of PHPMyAdmin in Java using servlets, maven and tocat server
 
@@ -9,16 +9,16 @@ Pour se connecter sur la base de données, il suffit d'ajouter le driver JDBC ad
 
 Les paramètres de connexion se trouvent dans /src/main/resources/data.properties
 
-Pour lancer le serveur
+## Pour lancer le serveur
 
-```shell
+`
 $ mvn package
 
 $ mvn tomcat7:run
-```
+`
 
-API
+## API
 
-``` /projet07/servlet-Select?table=table ```  : List a database and allow you to insert data
+` /projet07/servlet-Select?table=table `  : List a database and allow you to insert data
 
 
