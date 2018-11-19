@@ -65,11 +65,11 @@ public class Select extends HttpServlet {
 			rsmd = rs.getMetaData();
 			try {
 				out.println("<h2> Insert dans la table : " + table + "</h2>");
-				out.println("<form method=POST action=servlet-Insert>");
+				out.println("<form class=\"form text-center\" method=POST action=servlet-Insert>");
 				out.println("<input type=hidden name=table value=" + table + ">");
 				for (int i = 1; i <= rsmd.getColumnCount(); i++) {
 					out.println(
-							rsmd.getColumnLabel(i) + " : " + "<input type=text name=" + rsmd.getColumnLabel(i) + ">");
+							"<label>" + rsmd.getColumnLabel(i) + "</label> : " + "<input type=text name=" + rsmd.getColumnLabel(i) + ">");
 				}
 				out.println("<input type=Submit value=Submit>");
 				out.println("<div>");

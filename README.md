@@ -4,19 +4,22 @@ Sort of PHPMyAdmin in Java using servlets, maven and tomcat server
 
 By César Wibaut
 
+In order to connect to your own database, you have to add the right JDBC driver to the pom.xml dependencies, and put the database connexion data in the /src/main/resources/data.properties file
 
-Pour se connecter sur la base de données, il suffit d'ajouter le driver JDBC adapté au pom.xml, et modifier les données de connexion.
-
-Les paramètres de connexion se trouvent dans /src/main/resources/data.properties
-
-## Pour lancer le serveur
-
-`$ mvn package `
+## To run the server
 
 `$ mvn tomcat7:run`
 
 ## API
 
-` /projet07/servlet-Select?table=table `  : List a database and allow you to insert data
+`GET /projet07/servlet-Select?table=table `  : List a database and allows you to insert data
+
+`POST /projet07/servlet-Delete ` : Delete an entry from the database
+
+`POST /projet07/updateDB ` : Update an entry in the database
+
+`GET /projet07/servlet-Update` : Get the update form with the current data in the inputs
+
+`POST /projet07/servlet-Insert` : Add an entry in the database
 
 
